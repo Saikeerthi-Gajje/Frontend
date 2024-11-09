@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--(1) Login Page-->>
+    <h1>Login Page</h1>
+    <form action="" method="">
+        <label for="username" >UserName</label>
+        <input id="username" placeholder="Enter Your Name"><br><br>
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter Your Password"/><br><br>
+        <button type="submit">Login</button><br><br>
+        
+        <!--Form with attributes text, email and password with date picker-->>
+        <label for="email">Email</label>
+        <input type="email" placeholder="Enter Your Email" id="email"><br><br>
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter Password" id="password"><br><br>
+        <label for="date">Date</label>
+        <input type="date" aria-placeholder="Choose date" id="date"><br><br>
+        <label for="queries">Queries:</label>
+        <input type="text" placeholder="Any queries text here" id="queries">
+    </form>
+    
+    <!--Table with 3 rows and 4 columns-->
+    <h1>Student Marks</h1>
+    <table border="2">
+        <tr>
+            <td rowspan="1"><b>Name</b></td>            
+            <td>Batch</td>
+            <td>RollNumber</td>
+            <td>Marks</td>
+        </tr>
+
+        <tr>
+            <td><b>G.Saikeerthi<b></td>
+            <td>JFS 10</td>
+            <td>110</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <td><b>K.Vaishnavi</b></td>
+            <td>JFS 10</td>
+            <td>111</td>
+            <td>21</td>
+        </tr>
+    </table>
+
+    <!--Adding a Video-->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/uofYHU_zLJw?si=OynfuQDYX7Qf9A3z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe><br><br>
+       
+    <!--Adding Images-->
+    <img src="https://images.pexels.com/photos/56866/garden-rose-red-pink-56866.jpeg?auto=compress&cs=tinysrgb&w=800"  height="300"  width="300" alt="First image">
+    <img src="https://images.pexels.com/photos/85773/pexels-photo-85773.jpeg?auto=compress&cs=tinysrgb&w=800" height="300"  width="300" alt="">
+    <img src="https://images.pexels.com/photos/46216/sunflower-flowers-bright-yellow-46216.jpeg?auto=compress&cs=tinysrgb&w=800" height="300"  width="300" alt="">
+
+    <!--Selecting Countries from Drop Down-->
+    <br>
+    <label for="country">Country</label>
+    <select name="country" id="country">
+        <option value="India">India</option>
+        <option value="SriLanka">SriLanka</option>
+        <option value="Singapoor">Singapoor</option>
+    </select>
+
+</body>
+</html>
