@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive YouTube Embed</title>
+</head>
+<body>
+    <!--Responsive Youtube Embed Video-->
+    <div style="position:relative; width:100%; padding-bottom:56.25%; height:0; overflow:hidden;">
+        <iframe src="https://www.youtube.com/embed/pHTvgYWB6IE?si=KD1V5IR_4GQ660gt" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen
+                style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+      </div>
+
+      <!--Collapsible FAQ Section-->
+      <h1>Html Questions</h1>
+      <details>
+      <summary>What is Html ?</summary>
+      <p>HTML, or Hypertext Markup Language, is a code that defines the structure and meaning of web content. It's the most basic building block of the web and is used to tell web browsers how to display text, images, and other content on a page</p>
+      </details>
+      <details>
+        <summary>What are Tags ?</summary>
+        <p>HTML elements are set off from other text using tags, which are the element name surrounded by < and >.</p>
+      </details>
+      <details>
+        <summary>What are Attributes ?</summary>
+        <p>Attributes provide additional information about HTML elements. Each tag has its own special attribute for example class, id, style, lang and type.<br>
+            Attributes are positioned inside the opening tag, before the right bracket.<br>
+            Values are assigned to attributes and they must be contained inside quotation marks.
+        </p>
+      </details>
+      <details>
+        <summary>What are elements ?</summary>
+        <p>HTML elements define the structure of web content.
+            An HTML element is a start tag and an end tag with content in between:
+            <img src="C:\Users\Administrator\Downloads\image.png" alt="element" width="1000" height="800">
+            </p>
+      </details>
+
+      <!--Form Signup -->
+      <h1> Signup Page</h1>
+      <form action="signup" method="post">
+        <label for="username">Username</label>
+        <input type="text" id="username" placeholder="Enter Your Name" ><br><br>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Enter Your Email "><br><br>
+        <button type="submit">Submit</button><br><br>
+      </form>
+
+
+        <!--Selecting Favourite Programming Languages-->>
+      <h2>Select Favorite Programming Languages</h2>
+      <form action="#" method="POST">
+          <label>
+              <input type="checkbox" name="languages" value="JavaScript"> JavaScript
+          </label><br>
+          <label>
+              <input type="checkbox" name="languages" value="Python"> Python
+          </label><br>
+          <label>
+              <input type="checkbox" name="languages" value="Java"> Java
+          </label><br>
+          <label>
+              <input type="checkbox" name="languages" value="C++"> C++
+          </label><br><br>
+          <input type="submit" value="Submit">
+      </form>
+      
+        <!--Submit Feedback Rating-->
+      <h2>Submit Your Feedback Rating</h2>
+    <form action="#" method="POST">
+        <label>
+            <input type="radio" name="rating" value="1"> 1 Star
+        </label><br>
+        <label>
+            <input type="radio" name="rating" value="2"> 2 Stars
+        </label><br>
+        <label>
+            <input type="radio" name="rating" value="3"> 3 Stars
+        </label><br>
+        <label>
+            <input type="radio" name="rating" value="4"> 4 Stars
+        </label><br>
+        <label>
+            <input type="radio" name="rating" value="5"> 5 Stars
+        </label><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

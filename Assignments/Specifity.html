@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color: red;
+        }
+        .highlight{
+            color: chartreuse;
+        }
+        #unique{
+            color: blue;
+        }
+
+        div{
+            color: darkmagenta;
+        }
+        h1{
+            color: crimson;
+        }
+        p{
+            color: inherit; /*Inherits color from div parent*/
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>This is a paragraph</p>
+    </div>
+    <div>
+        <p class="highlight">this is a paragraph</p>
+    </div>
+    <div >
+        <p id="unique">this is a paragraph</p>
+    </div>
+
+    <div>
+        <h1>Inherit</h1>
+        <p>This is a child inheriting color from parent div</p>
+    </div>
+</body>
+</html>

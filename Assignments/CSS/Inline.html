@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">         
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document1</title>
+    <style>
+        h1{
+            color: blueviolet ;
+        }
+        /* Element selector (lowest specificity) */
+    div p {
+      color: green;
+    }
+
+    /* Class selector */
+    .text {
+      color: blue;
+    }
+
+    /* ID selector */
+
+    /* Combination of classes and element (higher specificity than just a class) */
+     .text {
+      color: orange;
+    }
+
+    /* Inline styles (highest specificity) */
+    #inline-example {
+      color: purple;
+    }
+    </style>
+
+    <link href="style.css" ref="stylesheet">
+    
+</head>
+<body>
+    <h1 style="color: red;">This is book</h1>
+    
+        <!--Element with no attributes-->
+    <div>
+        <p>This is a paragraph without any class, ID, or inline style.</p>
+      </div>
+    
+      <!--With Class Selector-->
+    <div>
+        <p class="text">This is a paragraph with a class selector.</p>
+      </div>
+      
+      <!--With Id Selector-->
+      <div>
+        <p id="special-text">This is a paragraph with an ID selector.</p>
+      </div>
+    
+      <!--In Inline Style-->
+      <div>
+        <p id="inline-example" style="color: yellow;">This is a paragraph with inline style.</p>
+      </div>
+    
+
+</body>
+</html>
