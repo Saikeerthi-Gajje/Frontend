@@ -1,0 +1,1 @@
+alert("This is Java Script from an External file");

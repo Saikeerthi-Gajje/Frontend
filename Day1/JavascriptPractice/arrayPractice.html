@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects Tasks</title>
+</head>
+
+<body>
+    <!--1. Creating and Accessing Object Properties-->
+    <script>
+        let car = {
+            brand: "Benz",
+            model: "Corolla",
+            year: 2024
+        };
+
+        console.log(car.brand);  // "Benz"
+        console.log(car.model);  // "Corolla"
+        console.log(car.year);   // 2024
+    </script>
+
+    <!--2. Adding and Deleting Properties-->
+    <script>
+        let person = {};
+
+        person.firstName = "Saikeerthi"; // Add property firstName
+        person.lastName = "Gajje";  // Add property lastName
+        person.age = 21;            // Add property age
+
+        delete person.age;          // Delete age property
+
+        console.log(person);        // { firstName: "Saikeerthi", lastName: "Gajje" }
+
+    </script>
+
+    <!--3. Checking for a Property-->
+    <script>let book = {
+            title: "Harry Potter",
+            author: "JK Rowling"
+        };
+
+        function hasProperty(obj, prop) {
+            return prop in obj;
+        }
+
+        console.log(hasProperty(book, "title"));   // true
+        console.log(hasProperty(book, "year"));    // false
+        </script>
+
+        <!--4. Looping Through Object Properties-->
+    <script>
+        let student = {
+            name: "Keerthi",
+            age: 21,
+            grade: "A+"
+        };
+
+        for (let key in student) {
+            console.log(`${key}: ${student[key]}`);
+        }
+    </script>
+
+    <!--5. Counting Properties in an Object-->
+    <script>function countProperties(obj) {
+            let count = 0;
+            for (let key in obj) {
+                count++;
+            }
+            return count;
+        }
+
+        let NewUser = {
+            name: "Sharath",
+            age: 29,
+            isAdmin: true
+        };
+
+        console.log(countProperties(NewUser));  // 3
+    </script>
+
+    <!--6. Object with Methods-->
+    <script>let calculator = {
+            num1: 15,
+            num2: 5,
+            add() {
+                return this.num1 + this.num2;
+            },
+            subtract() {
+                return this.num1 - this.num2;
+            }
+        };
+
+        console.log(calculator.add());       // 20
+        console.log(calculator.subtract());  // 10
+    </script>
+
+    <!--7. Cloning an Object-->
+    <script>
+        let User = {
+            name: "Soumya",
+            age: 24
+        };
+
+        function cloneObject(obj) {
+            let clone = {};
+            for (let key in obj) {
+                clone[key] = obj[key];
+            }
+            return clone;
+        }
+        let userClone = cloneObject(User);
+        console.log(userClone);  // { name: "Soumya", age: 24 }
+    </script>
+
+    <!--8. Merging Objects-->
+    <script>
+        let userInfo1 = {
+            name: "Ram",
+            age: 28
+        };
+
+        let userInfo2 = {
+            age: 29,
+            city: "London"
+        }
+
+        let MergedUser = Object.assign({}, userInfo1, userInfo2);
+
+        console.log(MergedUser);  // { name: "Ram", age: 29, city: "London" }
+
+    </script>
+
+    <!--9. Object with Default Values-->
+    <script>
+        function createUser(name, age, role = "user") {
+            return {
+                name: name,
+                age: age,
+                role: role
+            };
+        }
+
+        let newUser = createUser("Prasanna", 20);
+        console.log(newUser);  // { name: "Prasanna", age: 20, role: "user" }
+
+    </script>
+
+    <!--10. Nested Objects-->
+    <script>
+        let company = {
+            name: "TCS",
+            employees: [
+                { name: "Keerthi", position: "Developer" },
+                { name: "Sushma", position: "Quality Assurance Engineer" }
+            ]
+        };
+
+        console.log(company.employees[0].name);   // "Keerthi"
+        console.log(company.employees[1].position);  // "Quality Assurance Engineer"
+
+    </script>
+
+    <!--11. Converting Objects to Arrays-->
+    <script>
+        let fruitPrices = {
+            PineApple: 2,
+            Pomogranate: 1,
+            Orange: 3
+        };
+
+        function getKeys(obj) {
+            return Object.keys(obj);
+        }
+
+        function getValues(obj) {
+            return Object.values(obj);
+        }
+
+        console.log(getKeys(fruitPrices));   // ["PineApple", "Pmogranate", "Orange"]
+        console.log(getValues(fruitPrices)); // [2, 1, 3]
+
+    </script>
+
+    <!--12. Sorting Object Properties-->
+    <script>let salaries = {
+            Swathi: 15000,
+            Ramya: 25000,
+            Priya: 30000
+        };
+
+        function sortSalaries(obj) {
+            return Object.keys(obj).sort((a, b) => obj[a] - obj[b]);
+        }
+
+        console.log(sortSalaries(salaries));  // ["Swathi", "Ramya", "Priya"]
+    </script>
+
+    <!--13. Destructuring an Object-->
+    <script>let user = {
+            name: "Lakshmi",
+            age: 21,
+            city: "India"
+        };
+
+        let { name, age, city } = user;
+
+        console.log(name);  // "Lakshmi"
+        console.log(age);   // 21
+        console.log(city);  // "India"
+    </script>
+
+    <!--14. Nested Object Destructuring-->
+    <script>
+    let person1 = {
+            name: "Arjun",
+            age: 28,
+            address: {
+                street: "Ambedkar Nagar",
+                city: "Karimnagar",
+                zipCode: 505415
+            }
+        };
+
+        let { address: { street, City, zipCode } } = person1;
+
+        console.log(street);  // "Ambedkar Nagar"
+        console.log(City);    // "Karimnagar"
+        console.log(zipCode); // 505415
+    </script>
+
+    <!--15. Merging Two Objects Using Spread Syntax-->
+    <script>
+    let user1 = { name: "Navya", age: 20 };
+        let user2 = { city: "Karimnagar", country: "India" };
+
+        let mergedUser = { ...user1, ...user2 };
+
+        console.log(mergedUser);  // { name: "Navya", age: 20, city: "Karimnagar", country: "India" }
+    </script>
+
+    <!--16. Freezing an Object-->
+    <script>
+    let settings = {
+            theme: "dark",
+            fontSize: "16px",
+            language: "en"
+        };
+
+        Object.freeze(settings);
+
+        settings.theme = "light";  // This change will be ignored
+        console.log(settings);     // { theme: "dark", fontSize: "16px", language: "en" }
+    </script>
+
+    <!--17. Object Entries-->
+    <script>
+    let scores = {
+            math: 90,
+            physics: 85,
+            chemistry: 74
+        };
+
+        let scoreEntries = Object.entries(scores);
+        console.log(scoreEntries); // [["math", 90], ["physics", 85], ["chemistry", 74]]
+    </script>
+
+    <!--18. Modifying Object Values-->
+    <script>
+    let team = {
+            player1: 5,
+            player2: 10,
+            player3: 7
+        };
+
+        function updateScore(obj, increment) {
+            for (let key in obj) {
+                obj[key] += increment;
+            }
+        }
+
+        updateScore(team, 3);
+        console.log(team);  // { player1: 8, player2: 13, player3: 10 }
+    </script>
+
+    <!--19. Object Method with this-->
+    <script>
+        let rectangle = {
+            width: 12,
+            height: 6,
+            area() {
+                return this.width * this.height;
+            }
+        };
+
+        console.log(rectangle.area());  // 72
+
+    </script>
+
+    <!--20. Find Max Property Value-->
+    <script>
+    let products = {
+            "T.V": 10000,
+            "laptop": 50000,
+            "phone": 20000
+        };
+
+        function findMaxPrice(obj) {
+            let maxPrice = 0;
+            let maxProduct = "";
+
+            for (let key in obj) {
+                if (obj[key] > maxPrice) {
+                    maxPrice = obj[key];
+                    maxProduct = key;
+                }
+            }
+
+            return maxProduct;
+        }
+
+        console.log(findMaxPrice(products));  // "laptop"
+        </script>
+</body>
+
+</html>
